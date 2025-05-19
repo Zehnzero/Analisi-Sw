@@ -8,6 +8,9 @@ from openai import OpenAI
 
 # Carica chiave API dal file .env
 load_dotenv()
+import os
+print("API KEY:", os.getenv("OPENAI_API_KEY"))  # Per debug, poi puoi rimuoverlo
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.set_page_config(page_title="Analisi Software Capital Market", layout="wide")
