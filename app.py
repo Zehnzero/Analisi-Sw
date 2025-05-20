@@ -43,7 +43,7 @@ Testi da analizzare:
 {contenuti}
 """
     risposta = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Sei un assistente esperto di tecnologie per il settore finanziario."},
             {"role": "user", "content": prompt}
